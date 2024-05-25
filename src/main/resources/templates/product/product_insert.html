@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{../../static/css/product_insert.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>product</title>
+</head>
+
+<body>
+<div class="container">
+    <!-- start form group -->
+    <div class="form-group">
+        <h1>Product</h1>
+        <form th:action="@{/product/insert}" method="post" enctype="multipart/form-data">
+            <!--start field group-->
+            <div class="field-group">
+                <label>Sub Category : </label>
+                <select name="subCategoryId">
+                    <option th:each="subCategory: ${subCategory}" th:text="${subCategory.name}"
+                            th:value="${subCategory.id}" name="sub_category_id"></option>
+                </select>
+            </div>
+            <!-- start field input -->
+            <div class="field-input">
+                <!-- <i class="fa-solid fa-list"></i> -->
+                <i class="fa-solid fa-box"></i>
+                <input type="text" placeholder="name" name="name">
+            </div> <!-- end field input -->
+
+            <!-- start field input -->
+            <div class="field-input">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <input type="text" placeholder="price" name="price">
+            </div> <!-- end field input -->
+
+            <!-- start field input -->
+            <div class="field-input">
+                <i class="fa-solid fa-image"></i>
+                <input type="file" name="imageFile">
+            </div> <!-- end field input -->
+
+
+            <div class="btn-field">
+                <button type="submit">Add product</button>
+            </div> <!-- end btn field -->
+        </form>
+    </div> <!-- end form group  -->
+</div>
+</body>
+
+</html>

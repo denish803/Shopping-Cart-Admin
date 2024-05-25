@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../image/nachural.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    min-width: 365px;
+    background: #fff;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.form-box .underline {
+    height: 5px;
+    width: 50px;
+    background: green;
+    border-radius: 3px;
+    margin: 1px auto 1px auto;
+}
+
+.form-box h1 {
+    color: green;
+    font-size: 40px;
+}
+
+.input-field {
+    background: #eaeaea;
+    margin: 15px 0px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.input-field input {
+    width: 100%;
+    background: transparent;
+    padding: 18px 20px;
+    border: 0;
+    outline: 0;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: #998;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    background: green;
+    color: #fff;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+.btn-field button:hover {
+    margin: 5px auto 5px auto;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 15px;
+    background: green;
+  }
+
+.filed-group p {
+    text-align: left;
+}
+
+.filed-group p a {
+    text-decoration: none;
+    color: green;
+}
+
+
+.filed-group {
+    height: 200px;
+}
+

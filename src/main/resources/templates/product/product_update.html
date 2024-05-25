@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{../../css/product_update.css} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>product update</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- start form group -->
+        <div class="form-group">
+            <h1>Product Update</h1>
+            <form action="/">
+                <!--start field group-->
+                <div class="field-group">
+
+                     <!-- start field input -->
+                     <div class="field-input">
+                        <!-- <i class="fa-solid fa-list"></i> -->
+                        <i class="fa-solid fa-id-badge"></i>
+                        <input type="text" name="id" th:value="${productList.id}" readonly>
+                    </div> <!-- end field input -->
+
+                    <!-- start field input -->
+                    <div class="field-input">
+                        <!-- <i class="fa-solid fa-list"></i> -->
+                        <i class="fa-solid fa-box"></i>
+                        <input type="text" placeholder="name" name="name" th:value="${productList.name}">
+                    </div> <!-- end field input -->
+
+                    <!-- start field input -->
+                    <div class="field-input">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <input type="text" placeholder="price" name="price" th:value="${productList.price}">
+                    </div> <!-- end field input -->
+ 
+                    <!-- start field input -->
+                    <div class="field-input">
+                        <i class="fa-solid fa-image"></i>
+                        <input type="file" name="image" th:value="${productList.image}">
+                        <img th:src="@{product/image?{imageName}(imageName=${productList.image})}">
+                    </div> <!-- end field input -->
+
+                    <div class="btn-field">
+                        <button type="submit">Update product</button>
+                    </div> <!-- end btn field -->
+
+                </div> <!--end field group-->
+            </form>
+        </div> <!-- end form group  -->
+    </div>
+</body>
+
+</html>

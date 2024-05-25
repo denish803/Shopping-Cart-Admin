@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("category_view.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.box-gorup {
+  width: 90%;
+  min-width: 500px;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 90px;
+}
+
+.box-gorup h1 {
+  color: #000;
+  font-size: 30px;
+}
+
+.box-gorup table {
+  border: 2px solid #000;
+  margin: 20px 0px 40px 0px;
+  border-radius: 10px;
+}
+
+.box-gorup th,
+td {
+  border: 2px solid #000;
+  border-radius: 5px;
+  height: 50px; 
+  width: 700px;
+}
+
+.box-gorup .name {
+  text-align: left;
+  padding: 2px 3px;
+}
+
+.box-gorup .row img {
+    border-radius: 50%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #383838;
+  border-radius: 6px;
+}
+
+.pagination ul {
+  margin: 20px 2px;
+  display: flex;
+}
+
+.pagination ul li {
+  display: inline-block;
+  margin: 0 5px;
+  background: #ccc;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.pagination ul li:hover {
+  background: #cc9;
+}
+
+.pagination a {
+  display: inline-flex;
+  font-size: 22px;
+  align-items: center;
+  font-weight: 500;
+  color: #383838;
+  background: transparent;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+.pagination i {
+  margin: 0px 10px;
+}
+
+.table-data {
+  height: 400px;
+  overflow: auto;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{../../css/singin.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Sing in</title>
+</head>
+
+<body>
+    <!--start container-->
+    <div class="container">
+        <!--start from box-->
+        <div class="form-box">
+            <h1 class="title">Sing In</h1>
+            <div class="underline"></div>
+            <form th:action="@{/sing-in/user}" method="post">
+                <!-- start filed group-->
+                <div class="filed-group">
+                    <!-- start input field-->
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" name="email" placeholder="email">
+                    </div> <!--end input field-->
+
+                    <!-- start input field-->
+                    <div class="input-field">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                        <input type="password" name="password" placeholder="passwords">
+                    </div> <!--end input field-->
+                   
+                    <p>I have not account <a th:href="@{/sing-up/user}">click hear!</a></p>
+                    
+                    <!--start btn sing in-->
+                    <div class="btn-field">
+                        <button type="submit">Sing in</button>
+                    </div> <!--ens btn sing in-->
+                    
+
+                </div> <!-- end field group-->
+            </form>
+        </div> <!-- end form box -->
+    </div> <!-- end container -->
+</body>
+
+</html>

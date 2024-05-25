@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font: Source Sans Pro -->
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{../../plugins/fontawesome-free/css/all.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{../../dist/css/adminlte.min.css}">
+
+    <title>Category Update</title>
+</head>
+
+<body>
+<div th:replace="~{header:: header}">..</div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!--    <div th:repalce="~{header:: header}">..</div>-->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Category Update</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Category Update</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Quick Example</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form th:action="@{/category/update}" method="post">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Category Id</label>
+                                    <div class="input-box">
+                                        <input type="text" th:value="${categoryData.id}" class="form-control"
+                                               name="category_id" id="exampleInputEmail1" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Category Name</label>
+                                    <div>
+                                        <input type="text" placeholder="category" name="name"
+                                               class="form-control" th:value="${categoryData.name}"
+                                               id="exampleInputPassword1">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script th:src="@{../../plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{../../plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- bs-custom-file-input -->
+<script th:src="@{../../plugins/bs-custom-file-input/bs-custom-file-input.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{../../dist/js/adminlte.min.js}"></script>
+<!-- AdminLTE for demo purposes -->
+<script th:src="@{../../dist/js/demo.js}"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+      bsCustomFileInput.init();
+    });
+</script>
+</body>
+
+</html>
